@@ -1,5 +1,7 @@
 var svg = d3.select("body")
-    .append("svg");
+    .append("svg")
+    .style("width", 960)
+    .style("height", 600);
 
 var path = d3.geoPath();
 
@@ -15,6 +17,6 @@ d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
 
     svg.append("path")
         .attr("class", "borders")
-        .attr("d", path(topojson.mesh(us.us.objects.counties, function(a, b) {
+        .attr("d", path(topojson.mesh(us, us.objects.counties, function(a, b) {
             return a !== b; })));
 });
