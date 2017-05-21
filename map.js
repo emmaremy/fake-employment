@@ -15,6 +15,6 @@ d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
 
     svg.append("path")
         .attr("class", "borders")
-        .attr("d", path(topojson.mesh(us.us.objects.states, function(a, b) P
-                    return a !== b; })));
-        });
+        .attr("d", path(topojson.mesh(us.us.objects.states, function(a, b) {
+            return a !== b; })));
+});
