@@ -1,5 +1,9 @@
 .counties :hover {
-    fill: red;
+    fill: #829b76;
+}
+
+.counties {
+    fill: #cfe0c7;
 }
 
 .borders {
